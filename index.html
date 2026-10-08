@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FashionStore</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+
+        <div class="contenedor">
+
+            <h1 class="logo">FashionStore</h1>
+
+            <nav class="nav">
+                <a href="#inicio">Inicio</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#categorias">Categorías</a>
+                <a href="#pedidos">Pedidos</a>
+                <a href="#carrito">
+                    Carrito 🛒
+                    <span id="contadorCarrito">0</span>
+                </a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- INICIO -->
+    <main>
+
+        <section id="inicio" class="hero">
+
+            <div class="contenedor">
+
+                <h2>Encuentra tu estilo</h2>
+
+                <p>
+                    Descubre nuestra colección de ropa y accesorios
+                    para todos los estilos.
+                </p>
+
+                <a href="#catalogo" class="boton">
+                    Ver catálogo
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- CATÁLOGO -->
+        <section id="catalogo" class="seccion">
+
+            <div class="contenedor">
+
+                <h2>Catálogo de productos</h2>
+
+                <div class="filtros">
+
+                    <input
+                        type="text"
+                        id="busqueda"
+                        placeholder="Buscar producto..."
+                    >
+
+                    <select id="filtroCategoria">
+
+                        <option value="">
+                            Todas las categorías
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Estado de carga -->
+                <p id="mensajeCarga">
+                    Cargando productos...
+                </p>
+
+
+                <!-- Mensajes de error -->
+                <p id="mensajeError"></p>
+
+
+                <!-- Productos -->
+                <div id="productos" class="productos-grid"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CATEGORÍAS -->
+        <section id="categorias" class="seccion categorias">
+
+            <div class="contenedor">
+
+                <h2>Nuestras categorías</h2>
+
+                <div id="listaCategorias" class="categorias-grid"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PEDIDOS -->
+        <section id="pedidos" class="seccion">
+
+            <div class="contenedor">
+
+                <h2>Consulta de pedidos</h2>
+
+                <p>
+                    Selecciona un cliente para consultar sus pedidos.
+                </p>
+
+                <select id="clientePedido">
+
+                    <option value="">
+                        Seleccionar cliente
+                    </option>
+
+                </select>
+
+                <div id="listaPedidos"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- CARRITO -->
+<section id="carrito" class="seccion carrito">
+
+    <div class="contenedor">
+
+        <h2>Carrito de compras</h2>
+
+        <div id="listaCarrito">
+
+            <p class="carrito-vacio">
+                Tu carrito está vacío.
+            </p>
+
+        </div>
+
+        <div id="resumenCarrito" class="resumen-carrito">
+
+            <h3>
+                Total:
+                <span id="totalCarrito">S/ 0.00</span>
+            </h3>
+
+            <button
+                id="btnVaciarCarrito"
+                class="boton boton-secundario"
+            >
+                Vaciar carrito
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- MODAL DETALLE DEL PRODUCTO -->
+<div
+    id="modalProducto"
+    class="modal"
+>
+
+    <div class="modal-contenido">
+
+        <button
+            id="cerrarModal"
+            class="cerrar-modal"
+        >
+            ×
+        </button>
+
+        <div id="detalleProducto"></div>
+
+    </div>
+
+</div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+
+        <div class="contenedor">
+
+            <p>
+                © 2026 FashionStore - Todos los derechos reservados
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
